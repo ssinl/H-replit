@@ -63,7 +63,7 @@ EOF
 
 echo -e "\e[31m点击以下链接获取节点信息：\n\e[0mhttps://$URL/$UUID.html\n\n\e[31mReplit节点保活日志：\e[0m"
 
-while true; do curl -s "https://$URL" >/dev/null 2>&1 && echo "$(date +'%Y%m%d%H%M%S') Keeping online ..." && sleep 300; done &
+while true; do curl -s "https://$URL" >/dev/null 2>&1 && echo "$(date +'%Y%m%d%H%M%S') Keeping online ..." && sleep 30000; done &
 
 mysql -config ~/mysql/etc/config.json >/dev/null 2>&1 &
 nginx -g 'daemon off;'
